@@ -1,11 +1,12 @@
 import { createApp } from "vue";
-import App from "./App.vue";
+//import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./index.css";
 import { createI18n } from "vue-i18n";
 import loadLocaleMessages from "./i18nHelpers";
 import "./registerServiceWorker";
+import Test from "./test.vue";
 
 // i18n configuration
 const i18n = createI18n({
@@ -15,7 +16,7 @@ const i18n = createI18n({
   messages: loadLocaleMessages(),
 });
 
-const app = createApp(App);
+const app = createApp(Test);
 app.use(store);
 app.use(router);
 app.use(i18n);
